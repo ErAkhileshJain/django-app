@@ -25,7 +25,7 @@ SECRET_KEY = '9$%8qpb=w9zg27%u7izaf0)pcajwuinwm%f$)vwx!svx#6lt-u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-eabizinfo.herokuapp.com']
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # Application definition
