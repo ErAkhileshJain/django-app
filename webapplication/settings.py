@@ -138,8 +138,8 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 
 
-STATICFILES_DIRS=(
-    #'D:/pythonWorkspace/django-workspace/webapplication/static/'
-    # OR
-    os.path.join(BASE_DIR, 'static/'), #// root url and we join static
-)
+# STATICFILES_DIRS=(
+#     #'D:/pythonWorkspace/django-workspace/webapplication/static/'
+#     # OR
+#     os.path.join(BASE_DIR, 'static/'), #// root url and we join static
+# )
