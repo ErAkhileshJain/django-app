@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['django-eabizinfo.herokuapp.com']
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # Application definition
-
+# git commits
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
