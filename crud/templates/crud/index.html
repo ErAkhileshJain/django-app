@@ -1,0 +1,62 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+<h3>Index Page</h3>
+
+{% comment %}
+
+{% for row in data %}
+
+<h4>Id : {{ row.id }}</h4>
+<h4>Name : {{ row.emp_name }}</h4>
+<h4>Email : {{ row.emp_email }}</h4>
+<h4>Address : {{ row.emp_address }}</h4>
+
+{% endfor %}
+
+{% endcomment %}
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for row in data %}
+    <tr>
+        <td>{{ row.id }}</td>
+        <td>{{ row.emp_name }}</td>
+        <td>{{ row.emp_email }}</td>
+        <td>{{ row.emp_address }}</td>
+        <td>
+            <a href="/crud/update?id={{row.id}}" style="color:green;">Update</a>
+            <a onclick="return deleteItem()" href="/crud/delete?id={{row.id}}" style="color:red;">Delete</a>
+            <a href="/crud/view?id={{row.id}}" style="color:blue;">View</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<script>
+
+    function deleteItem(){
+    if(confirm('Do want to delete ? '))
+        return true;
+    else
+        return false;
+    }
+
+
+</script>
+
+
+
+{% endblock %}

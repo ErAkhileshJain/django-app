@@ -1,0 +1,12 @@
+<title>Home</title>
+{% extends 'header.html' %}
+{% block content %}
+{% if request.user.username %}
+<h3>Welcome {{request.user.username}}</h3>
+<h3>city {{request.session.city}}</h3>
+<h3>Email {{request.session.email}}</h3>
+<a href="/logout" >Logout({{request.user.username}})</a>
+{% else %}
+<h4>Some thing went wrong <a href="/signin">Login Again.....</a></h4>
+{% endif %}
+{% endblock %}

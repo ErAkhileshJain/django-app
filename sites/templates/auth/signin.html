@@ -1,0 +1,14 @@
+<title>SignIn</title>
+{% extends 'header.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<h4>{{ message }}</h4>
+<h3>Sign In </h3>
+<form action="" method="post" novalidate> {% csrf_token%}
+    {{ form | crispy }}
+    <input type="submit" value="Sign In" class="btn btn-primary">
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+<title>Create</title>
+{% extends 'header.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<h3>View Page </h3>
+
+<h4>Id : {{ data.id }}</h4>
+<h4>Name : {{ data.emp_name }}</h4>
+<h4>Email : {{ data.emp_email }}</h4>
+<h4>Address : {{ data.emp_address }}</h4>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+<title>Home</title>
+{% extends 'header.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<form action="" method="post" novalidate> {% csrf_token%}
+    {{ form | crispy }}
+    <input type="submit" value="Submit">
+</form>
+
+<!--<h3>Hello....</h3>-->
+<!--<h4>Name  : {{name}}</h4>-->
+<!--<h4>Email : {{email}}</h4>-->
+
+<!--{%   if name == ""  %}-->
+<!--<h3>Empty Name</h3>-->
+<!--{% else %}-->
+<!--<h3>{{name}}</h3>-->
+<!--{% endif %}-->
+
+
+<!--<h3>Single item by index from list : {{l1.0}}</h3>-->
+<!--<h3>Single item by key from dictionary : {{d2.address}}</h3>-->
+
+<!--{% for i in l1 %}-->
+<!--<p>{{ i }}</p>-->
+<!--{% endfor %}-->
+
+<!--{% for k,v in d2.items%}-->
+<!--<p>{{ k }}:{{ v }}</p>-->
+<!--{% endfor %}-->
+
+{% endblock %}
+
